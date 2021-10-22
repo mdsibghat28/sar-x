@@ -9,6 +9,7 @@ import { TicketBookingComponent } from './ticket-booking/ticket-booking.componen
 import { SpaceRoomBookingComponent } from './space-room-booking/space-room-booking.component';
 import { LoginComponent } from './login/login.component';
 import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
     SpaceRoomBookingComponent,
     LoginComponent,
     ViewBookingsComponent,
-
+    RegistrationComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,16 @@
 package com.revature.sarxrest.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customer")
 public class Customer {
+<<<<<<< HEAD
 	
 	private int customerId;
 	private String firstName;
@@ -12,22 +22,55 @@ public class Customer {
 	
 	public Customer(String firstName, String lastName, String email, String password, String phoneNumber) {
 		super();
+=======
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "customerId")
+	private int customerId;
+
+    @Column(name = "firstName")
+	private String firstName;
+    @Column(name = "lastName")
+	private String lastName;
+    @Column(name = "email")
+	private String email;
+    @Column(name = "password")
+	private String password;
+    @Column(name = "phoneNumber")
+	private String phoneNumber;
+
+	public Customer() {
+
+	}
+
+	public Customer(int customerId, String firstName, String lastName, String email, String password, String phoneNumber) {
+		super();
+		this.customerId = customerId;
+>>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
 	}
+<<<<<<< HEAD
 	
 	public Customer() {
 		
 	}
+=======
+>>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
 
 	public int getCustomerId() {
 		return customerId;
 	}
 
+<<<<<<< HEAD
 	public void setCustomerId(int customerId) {
+=======
+	public void setCustomerId(int id) {
+>>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
 		this.customerId = customerId;
 	}
 
@@ -70,6 +113,7 @@ public class Customer {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+<<<<<<< HEAD
 
 	@Override
 	public String toString() {
@@ -78,5 +122,27 @@ public class Customer {
 	}
 	
 	
+=======
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Customer other = (Customer) obj;
+        if (customerId != other.customerId)
+            return false;
+        return true;
+    }
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+				+ email + ", password=" + password + ", phoneNumber=" + phoneNumber + "]";
+	}
+	
+>>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
 
 }
