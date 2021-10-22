@@ -10,6 +10,8 @@ import { SpaceRoomBookingComponent } from './space-room-booking/space-room-booki
 import { LoginComponent } from './login/login.component';
 import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
 
+import { RegistrationComponent } from './registration/registration.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,8 +19,12 @@ import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
     CustomerNavbarComponent,
     TicketBookingComponent,
     SpaceRoomBookingComponent,
+
+    RegistrationComponent,
+
     LoginComponent,
-    ViewBookingsComponent,
+    ViewBookingsComponent
+    
   ],
   imports: [
     BrowserModule,
