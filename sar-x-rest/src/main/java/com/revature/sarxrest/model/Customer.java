@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="customer")
 public class Customer {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -34,6 +35,7 @@ public class Customer {
 	public Customer(int customerId, String firstName, String lastName, String email, String password, String phoneNumber) {
 		super();
 		this.customerId = customerId;
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -41,11 +43,17 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
+	
+	
+
 	public int getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(int id) {
+
+	public void setCustomerId(int customerId) {
+
+	
 		this.customerId = customerId;
 	}
 
@@ -88,6 +96,8 @@ public class Customer {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+
 	@Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -108,5 +118,6 @@ public class Customer {
 				+ email + ", password=" + password + ", phoneNumber=" + phoneNumber + "]";
 	}
 	
+
 
 }
