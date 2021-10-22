@@ -32,8 +32,13 @@
 
             ],
             "scripts": [
+<<<<<<< HEAD
              
               
+=======
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+>>>>>>> 9d1a497aa13d52f0a3dd9f55d9f5d08d8517df2b
             ]
           },
           "configurations": {
