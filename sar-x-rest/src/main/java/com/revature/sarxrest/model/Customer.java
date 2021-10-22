@@ -10,19 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="customer")
 public class Customer {
-<<<<<<< HEAD
-	
-	private int customerId;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String password;
-	private String phoneNumber;
-	
-	
-	public Customer(String firstName, String lastName, String email, String password, String phoneNumber) {
-		super();
-=======
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -47,30 +35,25 @@ public class Customer {
 	public Customer(int customerId, String firstName, String lastName, String email, String password, String phoneNumber) {
 		super();
 		this.customerId = customerId;
->>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
 	}
-<<<<<<< HEAD
+
 	
-	public Customer() {
-		
-	}
-=======
->>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
+	
 
 	public int getCustomerId() {
 		return customerId;
 	}
 
-<<<<<<< HEAD
+
 	public void setCustomerId(int customerId) {
-=======
-	public void setCustomerId(int id) {
->>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
+
+	
 		this.customerId = customerId;
 	}
 
@@ -113,16 +96,8 @@ public class Customer {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-<<<<<<< HEAD
 
-	@Override
-	public String toString() {
-		return "Customer Id = " + customerId + ", First Name = " + firstName + ", Last Name = " + lastName
-				+ ", User Name = " + email + ", Phone Number = " + phoneNumber;
-	}
-	
-	
-=======
+
 	@Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -143,6 +118,6 @@ public class Customer {
 				+ email + ", password=" + password + ", phoneNumber=" + phoneNumber + "]";
 	}
 	
->>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
+
 
 }
