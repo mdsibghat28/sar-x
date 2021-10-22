@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,15 +17,21 @@ import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
 >>>>>>> rel1
 
+import { RegistrationComponent } from './registration/registration.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
 <<<<<<< HEAD
     HomeNavbarComponent,
     CustomerNavbarComponent,
     TicketBookingComponent,
     SpaceRoomBookingComponent
 =======
+=======
+    RegistrationComponent,
+>>>>>>> e8e414b116812081ccdcf397a139f9eff02fc2b6
     LoginComponent,
     ViewBookingsComponent,
     HomeNavbarComponent,
@@ -32,7 +40,12 @@ import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+
+    HttpClientModule
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

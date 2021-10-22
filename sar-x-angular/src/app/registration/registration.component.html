@@ -1,0 +1,101 @@
+
+<!--     
+<div class="wrapper bg-white">
+    <div class="h2 text-center">SAR-X</div>
+    <div class="h6 text-center">Don't have account yet?</div>
+    <div class="h4 text-muted text-center pt-2">Register YourSelf</div>
+    
+    <form  #signupform = "ngForm" class="pt-3" ngSubmit = "signUpCustomer()" >      
+        <div class="form-group py-2">
+            <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text" name="firstname" placeholder="Enter Your First name" required class=""> </div>
+        </div>
+        <div class="form-group py-2">
+            <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text" name="lastname" placeholder="Enter Your Last name" required class="" > </div>
+        </div>
+        <div class="form-group py-2">
+            <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text"name="email" placeholder="Enter Your Email Address " required class="" > </div>
+        </div>
+        <div class="form-group py-1 pb-2">
+            <div class="input-field"> <span class="fas fa-lock p-2"></span> <input type="text"  name="password"placeholder="Enter your Password" required class="" > <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
+        </div>
+        <div class="form-group py-2">
+            <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text"  name="phoneno" placeholder="Enter Your Phone Number" required class=""  > </div>
+        </div>
+        <div class="d-flex align-items-start">
+        </div> <button type = "submit"class="btn btn-block text-center my-3">SignUp</button>
+        <div class="text-center pt-3 text-muted" > Are you a Member? <a href="#">Login</a></div>
+    </form>
+</div> -->
+
+<div class="container register">
+
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3>Welcome To SAR-X</h3>
+            <h5>Enjoy The Space Ride</h5>
+            <button type="submit" class="btn btn-info text-center my-3">Login</button>
+        </div>
+
+        <div class="col-md-9 register-right">
+            <form #signupform="ngForm" >
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Register To Explore Space</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="firstname"
+                                        placeholder=" Enter Your First Name *" [(ngModel)]="customer.firstName"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email"
+                                        placeholder=" Enter Your Email *" [(ngModel)]="customer.email" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone"
+                                        class="form-control" name="phoneno" placeholder="Enter Your Phone Number*"
+                                        [(ngModel)]="customer.phoneNumber" value="" />
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="lastname"
+                                        placeholder=" Enter Your Last Name *" [(ngModel)]="customer.lastName"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password"
+                                        placeholder=" Enter Your Password *" [(ngModel)]="customer.password" value="" />
+                                </div>
+
+
+                                <button  (click)="signUpCustomer()" type="button" class="btn btn-info  text-center my-3">SignUp</button>
+                                <!-- <input type="submit" class="btnRegister" value="Register" /> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- [router]="['/login']" -->
