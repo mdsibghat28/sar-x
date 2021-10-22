@@ -11,6 +11,8 @@ import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
