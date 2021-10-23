@@ -2,6 +2,8 @@ package com.revature.sarxrest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,23 +34,20 @@ public class AutenticationController {
 		
 		
 	}
-//	@GetMapping("/login")
-//	public Customer logIn(@RequestBody Customer customer) throws Exception {
-//		String tempEmail = customer.getEmail();
-//		String tempPass = customer.getPassword();
-//		Customer obj = null;
-//		if(tempEmail != null && tempPass != null) {
-//			obj = customerService.CheckEmailAndPass(tempEmail, tempPass);
-//					}
-//		if(obj == null) {
-//			throw new Exception("InValid credentials");
-//		}
-//		return obj;
-//		
-//		
-//		
-//		
-// }
+	@GetMapping("/login/{email}/{password}")
+	public Customer logIn(@PathVariable String email, @PathVariable String password) throws Exception {
+		String tempEmail = email;
+		String tempPass = password;
+		Customer obj = null;
+		if(tempEmail != null && tempPass != null) {
+			obj = customerService.CheckEmailAndPass(tempEmail, tempPass);
+					}
+		if(obj == null) {
+			throw new Exception("InValid credentials");
+		}
+		return obj;
+	
+ }
 	
 
 }

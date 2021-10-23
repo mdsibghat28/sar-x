@@ -10,6 +10,6 @@ import com.revature.sarxrest.model.Customer;
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 	 public Customer findByEmail(String email);
 	
-	public Customer findByEmailAndEmail(String email, String password);
+	public Customer findByEmailAndPassword(String email, String password);
 
 }

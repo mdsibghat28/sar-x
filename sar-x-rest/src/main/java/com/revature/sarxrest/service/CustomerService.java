@@ -23,7 +23,7 @@ public class CustomerService {
 		
 	}
 	public Customer CheckEmailAndPass(String email,String password) {
-		return customerRepository.findByEmailAndEmail(email, password);
+		return customerRepository.findByEmailAndPassword(email, password);
 		
 	}
 
