@@ -15,6 +15,15 @@ public class SpaceRoom {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="spaceRoomId")
 	private int roomId;
+
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "check_in")
+	private String checkIn;
+	
+	@Column(name = "check_out")
+	private String checkOut;
 	
 	@Column(name="roomName")
 	private String roomName;
@@ -22,20 +31,58 @@ public class SpaceRoom {
 	@Column(name="accomodate")
 	private int accomodates;
 	
-	@Column(name="cost")
-	private double cost;
 	
 	@Column(name="customer_id")
 	private int customerId;
-	
-	public SpaceRoom(int customerId,String roomName, int accomodates, double cost) {
+		
+	public SpaceRoom(String name, String checkIn, String checkOut, String roomName, int accomodates, int customerId) {
 		super();
-		this.customerId=customerId;
+		this.name = name;
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
 		this.roomName = roomName;
 		this.accomodates = accomodates;
-		this.cost = cost;
+		this.customerId = customerId;
 	}
-	
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getCheckIn() {
+		return checkIn;
+	}
+
+
+
+	public void setCheckIn(String checkIn) {
+		this.checkIn = checkIn;
+	}
+
+
+
+	public String getCheckOut() {
+		return checkOut;
+	}
+
+
+
+	public void setCheckOut(String checkOut) {
+		this.checkOut = checkOut;
+	}
+
+
+
 	public SpaceRoom() {}
 
 	public int getRoomId() {
@@ -62,14 +109,6 @@ public class SpaceRoom {
 		this.accomodates = accomodates;
 	}
 
-	public double getCost() {
-		return cost;
-	}
-
-	public void setCost(double cost) {
-		this.cost = cost;
-	}
-
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -78,11 +117,16 @@ public class SpaceRoom {
 		this.customerId = customerId;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "SpaceRoom [roomId=" + roomId + ", roomName=" + roomName + ", accomodates=" + accomodates + ", cost="
-				+ cost + ", customerId=" + customerId + "]";
+		return "SpaceRoom [roomId=" + roomId + ", name=" + name + ", checkIn=" + checkIn + ", checkOut=" + checkOut
+				+ ", roomName=" + roomName + ", accomodates=" + accomodates + ", customerId="
+				+ customerId + "]";
 	}
+
+
 	
       
 	
