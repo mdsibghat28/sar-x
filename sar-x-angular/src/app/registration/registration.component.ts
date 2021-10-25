@@ -12,7 +12,6 @@ import { CustomerServiceService } from '../customer-service.service';
 })
 export class RegistrationComponent implements OnInit {
   customer = new Customer();
-  msg = "";
   
 
   constructor(private _service : CustomerServiceService) { }    

@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
+import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     ViewBookingsComponent,
     RegistrationComponent,
+    SpaceRoomsComponent,
     
   ],
   imports: [
