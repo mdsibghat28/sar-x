@@ -1,5 +1,8 @@
 package com.revature.sarxrest.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 public class SpaceRoom {
 	
 	private int roomId;
