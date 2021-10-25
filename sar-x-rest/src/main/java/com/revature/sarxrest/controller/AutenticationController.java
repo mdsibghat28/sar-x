@@ -24,15 +24,11 @@ public class AutenticationController {
 			Customer obj = customerService.CheckEmail(tempEmail);
 			if(obj != null) {
 				throw new  Exception("User With This Email "+tempEmail+" Already Registered");
-				
 			}
-			
 		}
 		Customer obj = null;
 		obj=customerService.saveCustomer(customer);
-		
-		
-		
+
 	}
 	@GetMapping("/login/{email}/{password}")
 	public Customer logIn(@PathVariable String email, @PathVariable String password) throws Exception {
@@ -46,8 +42,6 @@ public class AutenticationController {
 			throw new Exception("InValid credentials");
 		}
 		return obj;
-	
  }
 	
-
 }

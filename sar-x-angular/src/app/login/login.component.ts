@@ -10,6 +10,7 @@ import { CustomerServiceService } from '../customer-service.service';
 })
 export class LoginComponent implements OnInit {
   customer = new Customer();
+  msg = "";
 
   constructor(private _service:CustomerServiceService, private _router:Router) { }
 
@@ -22,9 +23,9 @@ export class LoginComponent implements OnInit {
         this._router.navigate(['view-booking']);
 
       },
-
       error=>{
         console.log("Exception Occured");
+        this.msg = "Please enter valid email and password";
       }
       
     );

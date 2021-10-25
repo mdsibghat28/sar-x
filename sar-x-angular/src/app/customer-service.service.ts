@@ -23,9 +23,6 @@ export class CustomerServiceService {
     let cust = currentcustomer.subscribe(data=>console.log(data));
     console.log(typeof(cust));
     return currentcustomer;
-    
-    
-
   }
 
 }

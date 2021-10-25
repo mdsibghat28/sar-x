@@ -15,7 +15,6 @@ public class CustomerService {
 	 private CustomerRepository customerRepository;
 	public Customer saveCustomer(Customer customer) {
 		 return  customerRepository.save(customer);
-	
 		
 	}
 	public Customer CheckEmail(String email) {
