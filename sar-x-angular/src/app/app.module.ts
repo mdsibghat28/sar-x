@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,10 +8,14 @@ import { TicketBookingComponent } from './ticket-booking/ticket-booking.componen
 import { SpaceRoomBookingComponent } from './space-room-booking/space-room-booking.component';
 import { LoginComponent } from './login/login.component';
 import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
-
 import { RegistrationComponent } from './registration/registration.component';
+<<<<<<< HEAD
 import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
+=======
+import { FormsModule } from '@angular/forms';
+import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
+>>>>>>> ticket-booking
 
 @NgModule({
   declarations: [
@@ -19,18 +24,22 @@ import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.compo
     CustomerNavbarComponent,
     TicketBookingComponent,
     SpaceRoomBookingComponent,
-
-    RegistrationComponent,
-
     LoginComponent,
     ViewBookingsComponent,
+<<<<<<< HEAD
     HomeNavbarComponent,
     CustomerNavbarComponent
+=======
+    RegistrationComponent,
+    SpaceRoomsComponent,
+>>>>>>> ticket-booking
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
