@@ -28,6 +28,11 @@ public class Customer {
 	private String phoneNumber;
 
 
+	public Customer() {	
+
+	}
+
+
 	public Customer(int customerId, String firstName, String lastName, String email, String password, String phoneNumber) {
 		super();
 		this.customerId = customerId;
@@ -38,9 +43,7 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Customer() {
-		
-	}
+	
 
 
 

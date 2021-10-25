@@ -1,17 +1,36 @@
 package com.revature.sarxrest.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
+@Table(name="space_room")
 public class SpaceRoom {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="spaceRoomId")
 	private int roomId;
+	
+	@Column(name="roomName")
 	private String roomName;
+	
+	@Column(name="accomodate")
 	private int accomodates;
+	
+	@Column(name="cost")
 	private double cost;
 	
-	public SpaceRoom(String roomName, int accomodates, double cost) {
+	@Column(name="customer_id")
+	private int customerId;
+	
+	public SpaceRoom(int customerId,String roomName, int accomodates, double cost) {
 		super();
+		this.customerId=customerId;
 		this.roomName = roomName;
 		this.accomodates = accomodates;
 		this.cost = cost;
@@ -51,12 +70,20 @@ public class SpaceRoom {
 		this.cost = cost;
 	}
 
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
 	@Override
 	public String toString() {
-		return "Room Id = " + roomId + ", Room Name = " + roomName + ", Accomodates = " + accomodates + ", Cost = "
-				+ cost;
+		return "SpaceRoom [roomId=" + roomId + ", roomName=" + roomName + ", accomodates=" + accomodates + ", cost="
+				+ cost + ", customerId=" + customerId + "]";
 	}
 	
-	 
-
+      
+	
 }

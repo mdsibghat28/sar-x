@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +12,7 @@ import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
-import { FormsModule } from '@angular/forms';
+
 import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
 
 @NgModule({
@@ -30,7 +31,9 @@ import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
+
     HttpClientModule
   ],
   providers: [],
