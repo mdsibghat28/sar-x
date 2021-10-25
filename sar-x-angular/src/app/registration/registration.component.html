@@ -27,35 +27,40 @@
     </form>
 </div> -->
 
-<div class="container register">
+<div class="container register background-image">
 
     <div class="row">
         <div class="col-md-3 register-left">
             <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
             <h3>Welcome To SAR-X</h3>
             <h5>Enjoy The Space Ride</h5>
-            <button type="submit" class="btn btn-info text-center my-3">Login</button>
+            <button type="submit" [routerLink]="['/login']" class="btn btn-info text-center my-3">Login</button>
         </div>
 
         <div class="col-md-9 register-right">
             <form #signupform="ngForm" >
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        
                         <h3 class="register-heading">Register To Explore Space</h3>
+                        
                         <div class="row register-form">
+                            <h4 class="text-success">{{msg}}</h4>
+                          
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="firstname"
-                                        placeholder=" Enter Your First Name *" [(ngModel)]="customer.firstName"
-                                        value="" />
+                                        placeholder=" Enter Your First Name *" [(ngModel)]="customer.firstName" required #firstname="ngModel" [class.is-invalid]="firstname.invalid && firstname.touched" value="" />
+                                       
+                                      
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control" name="email"
-                                        placeholder=" Enter Your Email *" [(ngModel)]="customer.email" value="" />
+                                        placeholder=" Enter Your Email *" [(ngModel)]="customer.email"  #email="ngModel"  [class.is-invalid]="email.invalid && email.touched" required value="" />
                                 </div>
                                 <div class="form-group">
                                     <input type="text" minlength="10" maxlength="10" name="txtEmpPhone"
-                                        class="form-control" name="phoneno" placeholder="Enter Your Phone Number*"
+                                        class="form-control" name="phoneno" placeholder="Enter Your Phone Number*" #txtEmpPhone="ngModel"  [class.is-invalid]="txtEmpPhone.invalid && txtEmpPhone.touched" required
                                         [(ngModel)]="customer.phoneNumber" value="" />
                                 </div>
 
@@ -66,12 +71,12 @@
 
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="lastname"
-                                        placeholder=" Enter Your Last Name *" [(ngModel)]="customer.lastName"
+                                        placeholder=" Enter Your Last Name *" [(ngModel)]="customer.lastName" #lastname="ngModel"  [class.is-invalid]="lastname.invalid && lastname.touched" required
                                         value="" />
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control" name="password"
-                                        placeholder=" Enter Your Password *" [(ngModel)]="customer.password" value="" />
+                                        placeholder=" Enter Your Password *" [(ngModel)]="customer.password" #password="ngModel"  [class.is-invalid]="password.invalid && password.touched" required value="" />
                                 </div>
 
 
