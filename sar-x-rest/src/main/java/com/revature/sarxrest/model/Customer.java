@@ -28,7 +28,7 @@ public class Customer {
     @Column(name = "phoneNumber")
 	private String phoneNumber;
 
-	public Customer() {
+	public Customer() {	
 
 	}
 

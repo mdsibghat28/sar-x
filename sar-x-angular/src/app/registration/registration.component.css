@@ -5,9 +5,10 @@
 }
 .register-left{
     text-align: center;
-    color: #fff;
+    color: rgb(250, 243, 243);
     margin-top: 4%;
 }
+
 .register-left input{
     border: none;
     border-radius: 1.5rem;
