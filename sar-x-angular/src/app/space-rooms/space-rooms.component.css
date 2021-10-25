@@ -1,0 +1,121 @@
+#room-container{
+    padding: 25px;
+}
+
+.room-item img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    max-height: 350px;
+    border: 3px solid rgb(4, 4, 153);
+    image-resolution: 250dpi;
+}
+
+.room-item .overlay-body h1 {
+    font-family:"Cinzel";
+    text-transform:uppercase;
+    padding:0;
+    font-size:25px;
+    font-weight: 700;
+    letter-spacing:1.5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+}
+
+.room-item .overlay-body {
+    position:absolute;
+    bottom:0;
+    background: linear-gradient(to bottom right, rgb(8, 8, 73, 0.8), rgb(39, 39, 155));
+    padding:0px 10px 10px;
+    width:100%;
+    height:50px;
+    text-align:center;
+    transition: 0.75s ease;
+}
+
+.room-item {
+    position:relative;
+    overflow:hidden!important;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.room-item .overlay-text {
+    height:0;
+    color:rgb(181, 199, 199);
+    padding-left:10px;
+    padding-right:10px;
+    font-weight: 200;
+}
+
+.price {
+    font-size:28px;
+    color:rgb(255, 255, 255);
+    font-family:"Cinzel";
+    margin-bottom: 5px;
+}
+
+.price span {
+    font-size:14px;
+}
+
+.room-item:hover .overlay-body {
+    height: 100%;
+    padding: 10px;
+}
+
+.room-item:hover .overlay-body .overlay-text{
+    opacity: 1;
+}
+
+.overlay-text{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    position: relative;
+    opacity: 0;
+    transition: opacity 500ms 100ms;
+    text-align: center;
+}
+
+.room-content {
+    margin-bottom: 10px;
+}
+
+.header {
+align-items: center;
+text-align: center;
+}
+
+.header img {
+    width: 150px;
+}
+
+.header {
+    background:url(../../assets/images/subheaderbg.jpg) top center no-repeat;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(185, 165, 240));
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.header h3 {
+    background: linear-gradient(to bottom right, rgb(90, 44, 165), rgb(255, 255, 255));
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: 'Cinzel';
+    
+}
+

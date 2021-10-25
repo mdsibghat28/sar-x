@@ -15,7 +15,6 @@ public class CustomerService {
 	 private CustomerRepository customerRepository;
 	public Customer saveCustomer(Customer customer) {
 		 return  customerRepository.save(customer);
-	
 		
 	}
 	public Customer CheckEmail(String email) {
@@ -23,8 +22,9 @@ public class CustomerService {
 		
 	}
 	public Customer CheckEmailAndPass(String email,String password) {
-		return customerRepository.findByEmailAndEmail(email, password);
+		return customerRepository.findByEmailAndPassword(email, password);
 		
 	}
+	
 
 }

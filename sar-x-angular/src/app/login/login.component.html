@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html>
+    <body>
+        <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+            <div class="card card0 border-0">
+                <div class="row d-flex">
+                    <div class="col-lg-6">
+                        <div class="card1 pb-5">
+                            <!-- <div class="row"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple111/v4/1e/b8/35/1eb8350c-56ce-f29d-a1a5-3a211734b326/source/512x512bb.jpg" class="logo"> </div> -->
+                            <!-- <div class="row"> <img src="https://images.pexels.com/photos/3697826/pexels-photo-3697826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="logo"> </div> -->
+                            <!-- <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div> -->
+                            <div class="row"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple111/v4/1e/b8/35/1eb8350c-56ce-f29d-a1a5-3a211734b326/source/512x512bb.jpg" class="logo"> </div>
+                            <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://cdn.dribbble.com/users/1325237/screenshots/11873285/media/f7f234f1ec657618b33a9082fe31cd5f.png?compress=1&resize=1600x1200" class="image"> </div>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>SAR-X</title>
-    <style>
-         .csi{
-            /*background-image: url("https://images.squarespace-cdn.com/content/v1/59ac769dd7bdcefdcdc9410b/1504488054416-721ZFJSU4AYPPJXCYHY0/Website-Design-Background-1.gif?format=2500w");  */
-            background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Purple111/v4/1e/b8/35/1eb8350c-56ce-f29d-a1a5-3a211734b326/source/512x512bb.jpg"); 
-                height: 800px;
-                background-position: center;
-                /* background-repeat: no-repeat;  */
-                background-size: cover;
-
-        }
-    
-    </style>
-</head>
-
-<body>
-    <!-- <img src = "https://www.pngall.com/wp-content/uploads/1/Bank-PNG-File.png" width = "150", height = "150" style="vertical-align:middle;margin:0px 700px"> -->
-    <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-            <h3 style="color:blue">SAR-X</h3>
-
-            <a href="home.html" class="btn btn-secondary">Home</a>
-            <a href="#" class="btn btn-secondary">Customer SignUp</a>
-            <a href="#" class="btn btn-secondary">Customer Login</a><br><br><br><br>
-
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form #loginform="ngForm">
+                        <div class="card2 card border-0 px-4 py-5">
+                            <h4 class="text-danger">{{msg}}</h4>
+                            <div class="row px-3"> <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Email Address</h6>
+                                </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address"  [(ngModel)]="customer.email"> </div>
+                            <div class="row px-3"> <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Password</h6>
+                                </label> <input type="password" name="password" placeholder="Enter password"  [(ngModel)]="customer.password"> </div>
+                            
+                            <div class="row mb-3 px-3"> <button type="submit" (click)="loginCustomer()" class="btn btn-blue text-center">Login</button> </div>
+                            <div class="row mb-4 px-3"> <small class="font-weight-bold" [routerLink]="['/']">Don't have an account? <a class="text-danger ">Register</a></small> </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </nav> -->
+    </body>
+</html> 
 
-    
-    <span style="color: crimson;"> <h1 id="dis" > </h1></span>
 
-    <div class="csi">
-        <form id="frm">
-            <h2>Customer Login</h2>
 
-            <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email" placeholder="Email"><br><br>
-            <label for="ps">Password:</label><br>
-            <input type="password" id = "ps" name="password" placeholder="Min. 8 characters"><br><br><br>
 
-            <!-- <input type = "submit" class="btn btn-primary" value = "SignUp"> -->
 
-            <!-- <a href="customer.html"> -->
-            <input type="button" id="sub" class="btn btn-primary" value="Login">
-        </form>
 
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form onsubmit="event.preventDefault()" class="box">
+                    <h1>Login</h1>
+                    <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="" placeholder="Username"> <input type="password" name="" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
+                    <div class="col-md-12">
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div> -->

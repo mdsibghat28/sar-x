@@ -24,14 +24,17 @@ public class FlightTicket {
 	private String date;
 	@Column(name="className")
 	private String className;
+
 	@Column(name="price")
 	private double price;
 	@Column(name="customerId")
 	private int customerId;
 	
-	
 	public FlightTicket(String name, String date, String className, double price,int customerId) {
+
 		super();
+		this.customerId = customerId;
+//		this.bookingId = bookingId;
 		this.name = name;
 		this.date = date;
 		this.className = className;
@@ -39,11 +42,28 @@ public class FlightTicket {
 		this.customerId = customerId;
 	}
 	
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
 	public FlightTicket() {}
 
 	public int getFlightId() {
 		return flightId;
 	}
+	
+
+//	public int getBookingId() {
+//		return bookingId;
+//	}
+//
+//	public void setBookingId(int bookingId) {
+//		this.bookingId = bookingId;
+//	}
 
 	public void setFlightId(int flightId) {
 		this.flightId = flightId;
@@ -86,17 +106,14 @@ public class FlightTicket {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public double getCustomerId() {
-		return customerId;
-	}
+	
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
 
 	
-	
-	
+
+
+
+
 	
 
 }

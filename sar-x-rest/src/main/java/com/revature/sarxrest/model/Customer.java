@@ -16,7 +16,6 @@ public class Customer {
 
     @Column(name = "customerId")
 	private int customerId;
-
     @Column(name = "firstName")
 	private String firstName;
     @Column(name = "lastName")
@@ -28,14 +27,15 @@ public class Customer {
     @Column(name = "phoneNumber")
 	private String phoneNumber;
 
-	public Customer() {
+
+	public Customer() {	
 
 	}
+
 
 	public Customer(int customerId, String firstName, String lastName, String email, String password, String phoneNumber) {
 		super();
 		this.customerId = customerId;
-
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -44,7 +44,8 @@ public class Customer {
 	}
 
 	
-	
+
+
 
 	public int getCustomerId() {
 		return customerId;
@@ -52,9 +53,8 @@ public class Customer {
 
 
 	public void setCustomerId(int customerId) {
-
-	
 		this.customerId = customerId;
+
 	}
 
 	public String getFirstName() {
@@ -97,6 +97,11 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer Id = " + customerId + ", First Name = " + firstName + ", Last Name = " + lastName
+				+ ", User Name = " + email + ", Phone Number = " + phoneNumber;
+	}
 
 	@Override
     public boolean equals(Object obj) {
@@ -112,12 +117,5 @@ public class Customer {
         return true;
     }
 
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
-				+ email + ", password=" + password + ", phoneNumber=" + phoneNumber + "]";
-	}
 	
-
-
 }
