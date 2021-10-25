@@ -48,6 +48,7 @@ public class AutenticationController {
 		if(obj == null) {
 			throw new Exception("InValid credentials");
 		}
+		System.out.println(obj);
 		return obj;
  }
 	

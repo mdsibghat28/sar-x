@@ -10,11 +10,11 @@ import { SpacebookingService } from '../spacebooking.service';
   styleUrls: ['./space-room-booking.component.css']
 })
 export class SpaceRoomBookingComponent implements OnInit {
-  currentCustomer : Customer = JSON.parse(sessionStorage.getItem('currentCustomer') || '{}');
+  currentCustomer = JSON.parse(sessionStorage.getItem('currentCustomer') || '{}');
   room:SpaceRooms = {
     roomName: "",
     accomodates: 0,
-    customerId: this.currentCustomer.id,
+    customerId: this.currentCustomer.customerId,
     checkIn: "",
     checkOut: "",
     name: ""

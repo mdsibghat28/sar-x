@@ -10,6 +10,7 @@ import { CustomerServiceService } from '../customer-service.service';
 })
 export class LoginComponent implements OnInit {
   customer = new Customer();
+  currentCustomer: Customer | undefined;
   msg = "";
 
   constructor(private _service:CustomerServiceService, private _router:Router) { }
@@ -20,6 +21,8 @@ export class LoginComponent implements OnInit {
     this._service.loginRest(this.customer).subscribe(
       data=>{
         console.log("Login Successful");
+       this.currentCustomer = data;
+        sessionStorage.setItem('currentCustomer', JSON.stringify(this.currentCustomer));
         this._router.navigate(['view-booking']);
 
       },
