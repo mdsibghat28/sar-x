@@ -9,13 +9,10 @@ import { SpaceRoomBookingComponent } from './space-room-booking/space-room-booki
 import { LoginComponent } from './login/login.component';
 import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
 import { RegistrationComponent } from './registration/registration.component';
-<<<<<<< HEAD
 import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
-=======
 import { FormsModule } from '@angular/forms';
 import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
->>>>>>> ticket-booking
 
 @NgModule({
   declarations: [
@@ -26,13 +23,8 @@ import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
     SpaceRoomBookingComponent,
     LoginComponent,
     ViewBookingsComponent,
-<<<<<<< HEAD
-    HomeNavbarComponent,
-    CustomerNavbarComponent
-=======
     RegistrationComponent,
     SpaceRoomsComponent,
->>>>>>> ticket-booking
     
   ],
   imports: [
