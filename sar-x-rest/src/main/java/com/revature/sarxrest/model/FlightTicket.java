@@ -18,23 +18,43 @@ public class FlightTicket {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="flightId")
 	private int flightId;
+	
 	@Column(name="name")
 	private String name;
+	
 	@Column(name="date")
 	private String date;
+	
 	@Column(name="className")
 	private String className;
 
 	@Column(name="price")
 	private double price;
+	
 	@Column(name="customerId")
 	private int customerId;
 	
-	public FlightTicket(String name, String date, String className, double price,int customerId) {
+	@Column(name="passenger_name")
+	private String passenger_name;
+	
+	@Column(name="passengers")
+	private int passengers;
+	
+	@Column(name="source")
+	private String source;
+	
+	@Column(name="destination")
+	private String destination;
+	
+	public FlightTicket(String destination,String source,int passengers,String passenger_name,String name, String date, String className, double price,int customerId) {
 
 		super();
 		this.customerId = customerId;
 //		this.bookingId = bookingId;
+		this.passenger_name =passenger_name;
+		this.passengers = passengers;
+		this.source = source;
+		this.destination = destination;
 		this.name = name;
 		this.date = date;
 		this.className = className;
@@ -42,6 +62,47 @@ public class FlightTicket {
 		this.customerId = customerId;
 	}
 	
+	
+	public String getPassenger_name() {
+		return passenger_name;
+	}
+
+
+	public void setPassenger_name(String passenger_name) {
+		this.passenger_name = passenger_name;
+	}
+
+
+	public int getPassengers() {
+		return passengers;
+	}
+
+
+	public void setPassengers(int passengers) {
+		this.passengers = passengers;
+	}
+
+
+	public String getSource() {
+		return source;
+	}
+
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+
+	public String getDestination() {
+		return destination;
+	}
+
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -93,12 +154,7 @@ public class FlightTicket {
 		this.className = className;
 	}
 
-	@Override
-	public String toString() {
-		return "FlightTicket [flightId=" + flightId + ", name=" + name + ", date=" + date + ", className=" + className
-				+ ", price=" + price + ", customerId=" + customerId + "]";
-	}
-
+	
 	public double getPrice() {
 		return price;
 	}
@@ -106,6 +162,15 @@ public class FlightTicket {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+
+	@Override
+	public String toString() {
+		return "FlightTicket [flightId=" + flightId + ", name=" + name + ", date=" + date + ", className=" + className
+				+ ", price=" + price + ", customerId=" + customerId + ", passenger_name=" + passenger_name
+				+ ", passengers=" + passengers + ", source=" + source + ", destination=" + destination + "]";
+	}
+	
 	
 
 

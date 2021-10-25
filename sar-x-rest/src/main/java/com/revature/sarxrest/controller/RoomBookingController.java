@@ -1,5 +1,7 @@
 package com.revature.sarxrest.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +20,9 @@ public class RoomBookingController {
 	@Autowired
 	private SpaceRoomService spaceRoomService;
 	@PostMapping("/rooms")
-	public void postSpaceRoom(@RequestBody SpaceRoom spaceRoom) {
+	public  void postSpaceRoom(@RequestBody SpaceRoom spaceRoom) {
 		spaceRoomService.addSpaceRoom(spaceRoom);
+		
 		
 	}
 	
@@ -33,8 +36,8 @@ public class RoomBookingController {
 	}
 	
 	@GetMapping("/spaceRoom/{customerId}")
-	public SpaceRoom viewRoom(@PathVariable int customerId) {
-		return spaceRoomService.viewSpaceRoom(customerId);
+	public List<SpaceRoom>  viewRoom(@PathVariable int customerId) {
+		return (List<SpaceRoom>) spaceRoomService.viewSpaceRoom(customerId);
 	}
 		
 	

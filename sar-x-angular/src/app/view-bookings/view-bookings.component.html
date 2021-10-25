@@ -54,8 +54,10 @@
                     <th scope="col">Flight Name</th>
                     <th scope="col">Flight Class</th>
                     <th scope="col">Passenger Name</th>
+                    
                     <th scope="col">Date</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Passengers</th>
                     <th scope="col">Source</th>
                     <th scope="col">Destination</th>
                     <th scope="col">Booking Options</th>
@@ -64,46 +66,26 @@
 
             </thead>
             <tbody>
-                <tr>
+                
+               
+                <tr *ngFor="let ticket of tickets">
 
-                    <th scope="row">1</th>
-                    <td>Sahith Damarowthu</td>
-                    <td>23/10/2021</td>
-                    <td>ELITE PRO MAX VIEW-SEAT</td>
-
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
-
-                </tr>
-                <tr>
-
-                    <th scope="row">2</th>
-                    <td>Sibghatullah Mohammed</td>
-                    <td>23/10/2021</td>
-                    <td>ELITE PRO MAX VIEW-SEAT</td>
-
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
-
-                </tr>
-                <tr>
-
-                    <th scope="row">3</th>
-                    <td>Thallam Radha Sravani</td>
-                    <td>23/10/2021</td>
-                    <td>ELITE PRO MAX VIEW-SEAT</td>
+                    <th scope="row">{{ticket.flightId}}</th>
+                    <td>{{ticket.name}}</td>
+                    <td>{{ticket.className}}</td>
+                    <td>{{ticket.passenger_name}}</td>
+                    <td>{{ticket.date}}</td>
+                    <td>{{ticket.price}}</td>
+                    <td>{{ticket.passengers}}</td>
+                    <td>{{ticket.source}}</td>
+                    <td>{{ticket.destination}}</td>
+                    
+                   
 
                     <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
 
                 </tr>
-                <tr>
-
-                    <th scope="row">4</th>
-                    <td>Arshatullah Mohammed</td>
-                    <td>23/10/2021</td>
-                    <td>ELITE PRO MAX VIEW-SEAT</td>
-
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
-
-                </tr>
+               
             </tbody>
 
         </table>
@@ -117,12 +99,16 @@
             <thead>
 
                 <tr>
-
-                    <th scope="col">BookingNumber</th>
-                    <th scope="col">Passenger Name</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Space Room</th>
+                    
+                    <th scope="col">Space Room Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Room Name</th>
+                    <th scope="col">Accomodate</th>
+                    <th scope="col">Customer Id</th>
+                    <th scope="col">Check-In</th>
+                    <th scope="col">Check-Out</th>
                     <th scope="col">Booking Options</th>
+                    
 
                 </tr>
 

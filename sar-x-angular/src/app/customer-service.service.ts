@@ -18,7 +18,7 @@ export class CustomerServiceService {
 
   }
   public loginRest(customer : Customer):Observable<any>{
-    let currentcustomer= this._http.get<any>("http://localhost:8090/login/"+ customer.email + "/" + customer.password)
+    let currentcustomer= this._http.get<any>("http://localhost:8090/login/"+ customer.email + "/" + customer.password);
 
     let cust = currentcustomer.subscribe(data=>console.log(data));
     console.log(typeof(cust));

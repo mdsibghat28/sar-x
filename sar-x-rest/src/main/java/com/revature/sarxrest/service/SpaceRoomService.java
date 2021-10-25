@@ -1,5 +1,7 @@
 package com.revature.sarxrest.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,8 +27,8 @@ public class SpaceRoomService {
 		roomRepo.deleteById(id);
 		
 	}
-	public SpaceRoom viewSpaceRoom(int customerId) {
-		return roomRepo.findByCustomerId(customerId);
+	public List<SpaceRoom> viewSpaceRoom(int customerId) {
+		return (List<SpaceRoom>) roomRepo.findByCustomerId(customerId);
 	}
 
 
