@@ -5,7 +5,7 @@
             <form class="row gy-2 gx-3 align-items-center" #roomBooking = "ngForm" >
                 <div class="col-md-4">
                   <!-- <label class="visually-hidden" for="yourName">Name</label> -->
-                  <input type="text" class="form-control" id="autoSizingInput" placeholder="Your Name" name="name">
+                  <input type="text" class="form-control" [(ngModel)]="room.name" id="autoSizingInput" placeholder="Your Name" name="name">
                 </div>
                 <div class="col-md-4">
                   <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
@@ -15,8 +15,8 @@
                 </div>
                 <div class="col-md-4">
                   <!-- <label class="visually-hidden" for="autoSizingSelect">No. of Rooms</label> -->
-                  <select class="form-select" id="autoSizingSelect">
-                    <option selected>No of Rooms</option>
+                  <select class="form-select" [(ngModel)]="room.accomodates" id="autoSizingSelect" name="guests">
+                    <option selected>No of Guests</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -25,38 +25,59 @@
                 </div>
                 <div class="col-md-4">
                     <!-- <label class="visually-hidden" for="autoSizingInput">Check-in</label> -->
-                    <input type="text" data-provide = "datepicker" class="form-control" id="autoSizingInput" placeholder="Check-in">
+                    <input type="text" name="check-in" [(ngModel)]="room.checkIn"  class="form-control" id="autoSizingInput" placeholder="Check-in">
                   </div>
                   <div class="col-md-4">
                     <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
                     <div class="input-group">
-                      <input type="text" data-provide="datepicker" class="form-control" id="autoSizingInputGroup" placeholder="Check-out">
+                      <input type="text" name="check-out"  [(ngModel)]="room.checkOut" class="form-control" id="autoSizingInputGroup" placeholder="Check-out">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <!-- <label class="visually-hidden" for="autoSizingSelect">Preference</label> -->
-                    <select class="form-select" id="autoSizingSelect">
+                    <select class="form-select" name="room-name" id="autoSizingSelect" [(ngModel)]="room.roomName">
                       <option selected>Room</option>
-                      <option value="">Deluxe Room</option>
-                      <option value="">Luxury Room</option>
-                      <option value="">Premier Room</option>
-                      <option value="">Deluxe Suite</option>
-                      <option value="">Luxury Suite</option>
-                      <option value="">Premier Suite</option>
+                      <option value="Deluxe Room">Deluxe Room</option>
+                      <option value="Luxury Room">Luxury Room</option>
+                      <option value="Premier Room">Premier Room</option>
+                      <option value="Deluxe Suite">Deluxe Suite</option>
+                      <option value="Luxury Suite">Luxury Suite</option>
+                      <option value="Premier Suite">Premier Suite</option>
                     </select>
                   </div>
+                  <div class="col-md-12">
+                    <textarea cols="10" rows="8" name="message" id="message" class="form-control" placeholder="Any Messages?"></textarea>
+                    </div>
                 <div class="col-auto">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="button" class="btn btn-primary" (click)="bookRoom()">Submit</button>
                 </div>
               </form>
         </div>
+        <div id="sidebar" class="col-md-4">
+            <!-- widget -->
+            <div class="widget widget-text">
+                <h3>Our Address</h3>
+                <div class="map-small">
+                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.id/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=16+Riverside+Rd,+Singapore&amp;sll=-2.547988,118.037109&amp;sspn=29.394918,50.756836&amp;ie=UTF8&amp;geocode=Fb8IFgAdu40vBg&amp;split=0&amp;hq=&amp;hnear=16+Riverside+Rd,+Singapore&amp;ll=1.444031,103.779771&amp;spn=0.014522,0.024784&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=false"></iframe>
+                </div>
+    
+                <address>
+                    <h4>Corsiva South Beach</h4>
+                    <span>20 Main Street, Melbourne</span>
+                    <span><strong>Phone:</strong>(200) 333 8890</span>
+                    <span><strong>Fax:</strong>(200) 333 8892</span>
+                    <span><strong>Email:</strong><a href="mailto:contact@example.com">contact@example.com</a></span>
+                    <span><strong>Web:</strong><a href="#test">http://example.com</a></span>
+                </address>
+    
+    
+            </div>
+            <!-- widget close -->
+        </div>
     </div>
+
 </div> 
 
-
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
        
        
 

@@ -30,9 +30,7 @@ export class RegistrationComponent implements OnInit {
     data => {
       console.log("response received");
       this.msg="Registered Successfully";
-      // this._router.navigate(["/login"]);
-
-    
+      sessionStorage.setItem('currentCustomer', JSON.stringify(this.customer));
     },
     error =>
     {
