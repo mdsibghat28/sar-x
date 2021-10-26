@@ -13,12 +13,12 @@ export class SpaceRoomService {
   constructor(private http:HttpClient) { }
   
   public roomRest():Observable<any>{
-    return this.http.get<any>("http://localhost:8090/spaceRoom/"+this.customer.customerId);
+    return this.http.get<any>("http://localhost:8080/spaceRoom/"+this.customer.customerId);
    
     
 
   }
   public cancelRm(id:number):Observable<any>{
-    return this.http.delete<any>("http://localhost:8090/cancelRooms/"+id);
+    return this.http.delete<any>("http://localhost:8080/cancelRooms/"+id);
   }
 }

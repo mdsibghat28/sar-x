@@ -19,7 +19,7 @@ customer=JSON.parse(sessionStorage.getItem('currentCustomer')|| '{}');
 
   
   public ticketRest():Observable<any>{
-    return this.http.get<any>("http://localhost:8090/tickets/"+this.customer.customerId);
+    return this.http.get<any>("http://localhost:8080/tickets/"+this.customer.customerId);
    
     
 
@@ -27,7 +27,7 @@ customer=JSON.parse(sessionStorage.getItem('currentCustomer')|| '{}');
 
   public canceltckt(id:number):Observable<any>{
     
-    return this.http.delete<any>("http://localhost:8090/canceltcks/"+id);
+    return this.http.delete<any>("http://localhost:8080/canceltcks/"+id);
     
   }
   }
