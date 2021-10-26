@@ -7,35 +7,31 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
+
 @Entity
 @Table(name="flight_ticket")
+
 public class FlightTicket {
-	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="flightId")
 	private int flightId;
-	
 	@Column(name="name")
 	private String name;
-	
 	@Column(name="date")
 	private String date;
-	
 	@Column(name="className")
 	private String className;
-	
+
 	@Column(name="price")
 	private double price;
-	
 	@Column(name="customerId")
 	private int customerId;
 	
-//	@Column(name="bookingId")
-//	private int bookingId;
-	
-	
-	public FlightTicket(int customerId,String name, String date, String className, double price) {
+	public FlightTicket(String name, String date, String className, double price,int customerId) {
+
 		super();
 		this.customerId = customerId;
 //		this.bookingId = bookingId;
@@ -43,6 +39,7 @@ public class FlightTicket {
 		this.date = date;
 		this.className = className;
 		this.price = price;
+		this.customerId = customerId;
 	}
 	
 	public int getCustomerId() {
@@ -96,6 +93,12 @@ public class FlightTicket {
 		this.className = className;
 	}
 
+	@Override
+	public String toString() {
+		return "FlightTicket [flightId=" + flightId + ", name=" + name + ", date=" + date + ", className=" + className
+				+ ", price=" + price + ", customerId=" + customerId + "]";
+	}
+
 	public double getPrice() {
 		return price;
 	}
@@ -103,30 +106,14 @@ public class FlightTicket {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
 
-	@Override
-	public String toString() {
-		return "FlightTicket [flightId=" + flightId + ", name=" + name + ", date=" + date + ", className=" + className
-				+ ", price=" + price + ", customerId=" + customerId + "]";
-	}
-
-//	@Override
-//    public boolean equals(Object obj) {
-//        if (this == obj)
-//            return true;
-//        if (obj == null)
-//            return false;
-//        if (getClass() != obj.getClass())
-//            return false;
-//        Customer other = (Customer) obj;
-//        if (customerId != other.customerId)
-//            return false;
-//        return true;
-//    }
 
 	
 
-	
+
+
+
 	
 
 }

@@ -8,18 +8,32 @@
 
     <style>
         .c {
-            background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Purple111/v4/1e/b8/35/1eb8350c-56ce-f29d-a1a5-3a211734b326/source/512x512bb.jpg");
+            /* background-image: url("https://cdn.dribbble.com/users/1325237/screenshots/11873285/media/f7f234f1ec657618b33a9082fe31cd5f.png"); */
+            background-image: url("https://wallpaperaccess.com/full/21523.jpg");
 
-            height: 1300px;
+            height: 1000px;
             background-position: right;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-size: cover;
 
         }
-        .col-sm-4{
+
+        .col-sm-4 {
             position: relative;
         }
 
+        .t {
+            text-align: center;
+            color: rgb(17, 4, 194);
+            font-style: italic;
+            font-family: Garamond;
+            font-weight: 500;
+
+        }
+
+        .e {
+            color: azure;
+        }
     </style>
 
 </head>
@@ -27,50 +41,190 @@
 <body>
 
     <div class="c">
-        <div class="container-fluid">
-            <div class="display-4 mb-4">My Bookings</div>
-            <div class="row " id="account">
-            </div>
+        <div class="t">
+            <h1>Flight Bookings</h1>
         </div>
-        <div class="col-sm-4">
-            <div class="card card text-white bg-dark mb-3">
-                <div class="card-body ">
-                    <h5>Booking 1</h5>
-                    <div>Passenger Name : Sahith Damarowthu </div><br><br>
-                    <div>Date : 23/10/2021</div><br><br>
-                    <div>Flight Class : ELITE PRO MAX VIEW-SEAT</div><br><br>
-                    <div>Space Room :ULTRA-PRO-MAX </div><br><br>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card card text-white bg-dark mb-3">
-                <div class="card-body ">
-                    <h5>Booking 1</h5>
-                    <div>Passenger Name : Thallam Radha Sravani </div><br><br>
-                    <div>Date : 23/10/2021</div><br><br>
-                    <div>Flight Class : ELITE PRO VIEW-SEAT</div><br><br>
-                    <div>Space Room :Pro-Max </div><br><br>
+
+        <table class="table table-striped table-primary">
+            <thead>
+
+                <tr>
+                    
+                    <th scope="col">FlightId</th>
+                    <th scope="col">Flight Name</th>
+                    <th scope="col">Flight Class</th>
+                    <th scope="col">Passenger Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Booking Options</th>
+                </tr>
 
 
-                </div>
-            </div>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <th scope="row">1</th>
+                    <td>Sahith Damarowthu</td>
+                    <td>23/10/2021</td>
+                    <td>ELITE PRO MAX VIEW-SEAT</td>
+
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">2</th>
+                    <td>Sibghatullah Mohammed</td>
+                    <td>23/10/2021</td>
+                    <td>ELITE PRO MAX VIEW-SEAT</td>
+
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">3</th>
+                    <td>Thallam Radha Sravani</td>
+                    <td>23/10/2021</td>
+                    <td>ELITE PRO MAX VIEW-SEAT</td>
+
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">4</th>
+                    <td>Arshatullah Mohammed</td>
+                    <td>23/10/2021</td>
+                    <td>ELITE PRO MAX VIEW-SEAT</td>
+
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+        <div class="t">
+            <h1>Space-Room Bookings</h1>
         </div>
-        <div class="col-sm-4">
-            <div class="card card text-white bg-dark mb-3">
-                <div class="card-body ">
-                    <h5>Booking 1</h5>
-                    <div>Passenger Name : Sibghatullah Mohammed </div><br><br>
-                    <div>Date : 23/10/2021</div><br><br>
-                    <div>Flight Class : DELUXE VIEW-SEAT</div><br><br>
-                    <div>Space Room : MAX </div><br><br>
 
 
-                </div>
-            </div>
-        </div>
+        <table class="table table-striped table-info">
+            <thead>
+
+                <tr>
+
+                    <th scope="col">BookingNumber</th>
+                    <th scope="col">Passenger Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Space Room</th>
+                    <th scope="col">Booking Options</th>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+
+                    <th scope="row">1</th>
+                    <td>Sahith Damarowthu</td>
+                    <td>23/10/2021</td>
+                    <td>ULTRA-PRO-MAX</td>
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">2</th>
+                    <td>Sibghatullah Mohammed</td>
+                    <td>23/10/2021</td>
+                    <td>ULTRA-PRO-MAX</td>
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">3</th>
+                    <td>Thallam Radha Sravani</td>
+                    <td>23/10/2021</td>
+                    <td>ULTRA-PRO-MAX</td>
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+                <tr>
+
+                    <th scope="row">4</th>
+                    <td>Arshatullah Mohammed</td>
+                    <td>23/10/2021</td>
+                    <td>ULTRA-PRO-MAX</td>
+                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+
+
+
     </div>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid">
+    <div class="display-4 mb-4">My Bookings</div>
+    <div class="row " id="account">
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card card text-white bg-dark mb-3">
+        <div class="card-body ">
+            <h5>Booking 1</h5>
+            <div>Passenger Name : Sahith Damarowthu </div><br><br>
+            <div>Date : 23/10/2021</div><br><br>
+            <div>Flight Class : ELITE PRO MAX VIEW-SEAT</div><br><br>
+            <div>Space Room :ULTRA-PRO-MAX </div><br><br>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card card text-white bg-dark mb-3">
+        <div class="card-body ">
+            <h5>Booking 1</h5>
+            <div>Passenger Name : Thallam Radha Sravani </div><br><br>
+            <div>Date : 23/10/2021</div><br><br>
+            <div>Flight Class : ELITE PRO VIEW-SEAT</div><br><br>
+            <div>Space Room :Pro-Max </div><br><br>
+
+
+        </div>
+    </div>
+</div>
+<div class="col-sm-4">
+    <div class="card card text-white bg-dark mb-3">
+        <div class="card-body ">
+            <h5>Booking 1</h5>
+            <div>Passenger Name : Sibghatullah Mohammed </div><br><br>
+            <div>Date : 23/10/2021</div><br><br>
+            <div>Flight Class : DELUXE VIEW-SEAT</div><br><br>
+            <div>Space Room : MAX </div><br><br>
+
+
+        </div>
+    </div>
+</div> -->
