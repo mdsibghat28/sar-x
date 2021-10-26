@@ -13,6 +13,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.component';
 
+
 import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
 
 @NgModule({
