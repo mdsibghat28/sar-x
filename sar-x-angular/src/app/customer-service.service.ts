@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CustomerServiceService {
-  // url :string = "http://localhost:8090/register";
+loggedIn: boolean = false;
 
   constructor(private _http:HttpClient) { }
   
@@ -19,6 +19,17 @@ export class CustomerServiceService {
   public loginRest(customer : Customer):Observable<any>{
     let currentcustomer= this._http.get<any>("http://localhost:8080/login/"+ customer.email + "/" + customer.password);
     return currentcustomer;
+  }
+
+  login():void {
+    this.loggedIn = true ;
+  }
+
+  logout():void{
+    this.loggedIn = false;
+  }
+  public isLoggedIn():boolean{
+    return this.loggedIn;
   }
 
 }

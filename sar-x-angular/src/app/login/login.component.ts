@@ -23,7 +23,8 @@ export class LoginComponent implements OnInit {
         console.log("Login Successful");
        this.currentCustomer = data;
         sessionStorage.setItem('currentCustomer', JSON.stringify(this.currentCustomer));
-        this._router.navigate(['view-booking']);
+        this._router.navigate(['space-rooms']);
+        this._service.login();
 
       },
       error=>{

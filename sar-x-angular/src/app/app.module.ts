@@ -15,6 +15,8 @@ import { CustomerNavbarComponent } from './customer-navbar/customer-navbar.compo
 
 
 import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
+import { ViewFlightsComponent } from './view-flights/view-flights.component';
+import { BookFlightComponent } from './book-flight/book-flight.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
     ViewBookingsComponent,
     RegistrationComponent,
     SpaceRoomsComponent,
+    ViewFlightsComponent,
+    BookFlightComponent,
     
   ],
   imports: [

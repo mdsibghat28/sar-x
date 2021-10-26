@@ -1,0 +1,23 @@
+<div class="header">
+    <img src="../../assets/images/logo.png" alt="">
+        <h1>Space Travel</h1>
+        <h3></h3>
+</div>
+
+<div class="container-fluid" id="room-container">
+    <div class="row">
+        <div class="col-md-6 col-xl-4 room-content" *ngFor = "let room of rooms">
+            <div class="room-item item">
+                <img src="{{room.image}}" alt="">
+                <div class="overlay-body">
+                    <h1>{{room.name}}</h1>
+                    <div class="overlay-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas excepturi pariatur quia laudantium sunt dolorum odio odit nobis corrupti deleniti?</p>
+                        <div class="price">${{room.price}}<span>/person</span></div>
+                        <a class="btn btn-outline-primary" (click)="bookRoom(room.name)">Book Ticket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -25,23 +25,33 @@ public class FlightTicket {
 	@Column(name="className")
 	private String className;
 
-	@Column(name="price")
-	private double price;
 	@Column(name="customerId")
 	private int customerId;
 	
-	public FlightTicket(String name, String date, String className, double price,int customerId) {
+	@Column(name="passenger_name")
+	private String passenger_name;
+	@Column(name="passengers")
+	private int passengers;
+	@Column(name="source")
+	private String source;
+	@Column(name="destination")
+	private String destination;
+	
 
+	
+	public FlightTicket(String name, String date, String className, int customerId, String passenger_name,
+			int passengers, String source, String destination) {
 		super();
-		this.customerId = customerId;
-//		this.bookingId = bookingId;
 		this.name = name;
 		this.date = date;
 		this.className = className;
-		this.price = price;
 		this.customerId = customerId;
+		this.passenger_name = passenger_name;
+		this.passengers = passengers;
+		this.source = source;
+		this.destination = destination;
 	}
-	
+
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -93,19 +103,47 @@ public class FlightTicket {
 		this.className = className;
 	}
 
+	public String getPassenger_name() {
+		return passenger_name;
+	}
+
+	public void setPassenger_name(String passenger_name) {
+		this.passenger_name = passenger_name;
+	}
+
+	public int getPassengers() {
+		return passengers;
+	}
+
+	public void setPassengers(int passengers) {
+		this.passengers = passengers;
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
 	@Override
 	public String toString() {
-		return "FlightTicket [flightId=" + flightId + ", name=" + name + ", date=" + date + ", className=" + className
-				+ ", price=" + price + ", customerId=" + customerId + "]";
+		return "FlightTicket [name=" + name + ", date=" + date + ", className=" + className + ", customerId="
+				+ customerId + ", passenger_name=" + passenger_name + ", passengers=" + passengers + ", source="
+				+ source + ", destination=" + destination + "]";
 	}
 
-	public double getPrice() {
-		return price;
-	}
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
+
 	
 
 
