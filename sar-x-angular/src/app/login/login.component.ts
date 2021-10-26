@@ -13,15 +13,17 @@ export class LoginComponent implements OnInit {
   msg = "";
 
   constructor(private _service:CustomerServiceService, private _router:Router) { }
-
+  currentCustomer:Customer|undefined;
   ngOnInit(): void {
   }
   loginCustomer() {
     this._service.loginRest(this.customer).subscribe(
       data=>{
         console.log("Login Successful");
+        this.currentCustomer=data;
+        sessionStorage.setItem('currentCustomer',JSON.stringify(this.currentCustomer));
         this._router.navigate(['view-booking']);
-
+        
       },
       error=>{
         console.log("Exception Occured");

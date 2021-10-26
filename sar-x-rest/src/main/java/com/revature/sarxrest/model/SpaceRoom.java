@@ -22,9 +22,6 @@ public class SpaceRoom {
 	@Column(name="accomodate")
 	private int accomodates;
 	
-	@Column(name="cost")
-	private double cost;
-
 	@Column(name="customer_id")
 	private int customerId;
 	
@@ -37,7 +34,7 @@ public class SpaceRoom {
 	@Column(name="name")
 	private String name;
 	
-	public SpaceRoom(String name,String checkIn,String checkOut,int customerId,String roomName, int accomodates, double cost) {
+	public SpaceRoom(String name,String checkIn,String checkOut,int customerId,String roomName, int accomodates) {
 		super();
 		this.name=name;
 		this.checkIn=checkIn;
@@ -46,7 +43,7 @@ public class SpaceRoom {
 		this.customerId=customerId;
 		this.roomName = roomName;
 		this.accomodates = accomodates;
-		this.cost = cost;
+		
 	}
 	
 	public SpaceRoom() {}
@@ -75,13 +72,7 @@ public class SpaceRoom {
 		this.accomodates = accomodates;
 	}
 
-	public double getCost() {
-		return cost;
-	}
-
-	public void setCost(double cost) {
-		this.cost = cost;
-	}
+	
 
 	public int getCustomerId() {
 		return customerId;
@@ -117,10 +108,12 @@ public class SpaceRoom {
 
 	@Override
 	public String toString() {
-		return "SpaceRoom [roomId=" + roomId + ", roomName=" + roomName + ", accomodates=" + accomodates + ", cost="
-				+ cost + ", customerId=" + customerId + ", checkOut=" + checkOut + ", checkIn=" + checkIn + ", name="
-				+ name + "]";
+		return "SpaceRoom [roomId=" + roomId + ", roomName=" + roomName + ", accomodates=" + accomodates
+				+ ", customerId=" + customerId + ", checkOut=" + checkOut + ", checkIn=" + checkIn + ", name=" + name
+				+ "]";
 	}
+
+	
 
 	
 	

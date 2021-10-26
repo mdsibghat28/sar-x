@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Customer } from '../customer';
 import { SpaceTickets } from '../model/space-tickets';
 
 @Injectable({
@@ -8,17 +9,26 @@ import { SpaceTickets } from '../model/space-tickets';
 })
 export class TicketService {
 customerTickets:SpaceTickets[]=[];
-  constructor(private http:HttpClient) { }
 
+customer=JSON.parse(sessionStorage.getItem('currentCustomer')|| '{}');
+  constructor(private http:HttpClient) { }
+  tckt !:SpaceTickets;
   add(ticket:SpaceTickets){
     this.customerTickets.push(ticket);
   }
+
   
   public ticketRest():Observable<any>{
-    return this.http.get<any>("http://localhost:8090/tickets/15371");
+    return this.http.get<any>("http://localhost:8090/tickets/"+this.customer.customerId);
    
     
 
+  }
+
+  public canceltckt(id:number):Observable<any>{
+    
+    return this.http.delete<any>("http://localhost:8090/canceltcks/"+id);
+    
   }
   }
 

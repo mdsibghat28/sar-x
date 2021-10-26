@@ -1,46 +1,12 @@
-<html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>SAR-X</title>
 
-    <style>
-        .c {
-            /* background-image: url("https://cdn.dribbble.com/users/1325237/screenshots/11873285/media/f7f234f1ec657618b33a9082fe31cd5f.png"); */
-            background-image: url("https://wallpaperaccess.com/full/21523.jpg");
 
-            height: 1000px;
-            background-position: right;
-            background-repeat: repeat;
-            background-size: cover;
 
-        }
-
-        .col-sm-4 {
-            position: relative;
-        }
-
-        .t {
-            text-align: center;
-            color: rgb(17, 4, 194);
-            font-style: italic;
-            font-family: Garamond;
-            font-weight: 500;
-
-        }
-
-        .e {
-            color: azure;
-        }
-    </style>
-
-</head>
-
-<body>
+   
 
     <div class="c">
+        <div *ngIf="spaceTicketDeleted" class="alert alert-success" id ="display" role="alert">Space Ticket Deleted Successfully </div>
+        <div  *ngIf="spaceRoomDeleted" class="alert alert-success" id ="display" role="alert">Space Room Deleted Successfully </div>
         <div class="t">
             <h1>Flight Bookings</h1>
         </div>
@@ -82,13 +48,14 @@
                     
                    
 
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+                    <td><button  (click)="cancleTicket(ticket.flightId)" type="button" class="btn btn-danger" style='margin-right:16px'>Cancel</button></td>
 
                 </tr>
                
             </tbody>
 
         </table>
+
 
         <div class="t">
             <h1>Space-Room Bookings</h1>
@@ -104,7 +71,8 @@
                     <th scope="col">Name</th>
                     <th scope="col">Room Name</th>
                     <th scope="col">Accomodate</th>
-                    <th scope="col">Customer Id</th>
+                
+                   
                     <th scope="col">Check-In</th>
                     <th scope="col">Check-Out</th>
                     <th scope="col">Booking Options</th>
@@ -113,43 +81,22 @@
                 </tr>
 
             </thead>
+            
             <tbody>
-                <tr>
+                <tr *ngFor="let room of rooms">
 
-                    <th scope="row">1</th>
-                    <td>Sahith Damarowthu</td>
-                    <td>23/10/2021</td>
-                    <td>ULTRA-PRO-MAX</td>
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
-
-                </tr>
-                <tr>
-
-                    <th scope="row">2</th>
-                    <td>Sibghatullah Mohammed</td>
-                    <td>23/10/2021</td>
-                    <td>ULTRA-PRO-MAX</td>
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
+                    <th scope="row">{{room.roomId}}</th>
+                    <td>{{room.name}}</td>
+                    <td>{{room.roomName}}</td>
+                    <td>{{room.accomodates}}</td>
+                    <td>{{room.checkIn}}</td>
+                    <td>{{room.checkOut}}</td>
+                    <td><button  (click)="cancleRoom(room.roomId)"  type = "button" class="btn btn-danger" style='margin-right:16px'>Cancel</button></td>
 
                 </tr>
-                <tr>
-
-                    <th scope="row">3</th>
-                    <td>Thallam Radha Sravani</td>
-                    <td>23/10/2021</td>
-                    <td>ULTRA-PRO-MAX</td>
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
-
-                </tr>
-                <tr>
-
-                    <th scope="row">4</th>
-                    <td>Arshatullah Mohammed</td>
-                    <td>23/10/2021</td>
-                    <td>ULTRA-PRO-MAX</td>
-                    <td><a href="#" class="btn btn-danger" style='margin-right:16px'>Cancel</a></td>
-
-                </tr>
+               
+               
+               
             </tbody>
 
         </table>
@@ -159,9 +106,7 @@
 
     </div>
 
-</body>
 
-</html>
 
 
 
