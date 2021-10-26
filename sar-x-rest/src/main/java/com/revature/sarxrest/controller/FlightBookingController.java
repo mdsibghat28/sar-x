@@ -29,8 +29,8 @@ public class FlightBookingController {
 	}
 
 	@GetMapping("/tickets/{customerId}")
-	public FlightTicket viewBooking(@PathVariable int customerId) {
-		return flightservice.getTicket(customerId);
+	public List<FlightTicket> viewBooking(@PathVariable int customerId) {
+		return (List<FlightTicket>) flightservice.getTicket(customerId);
 
 	}
 

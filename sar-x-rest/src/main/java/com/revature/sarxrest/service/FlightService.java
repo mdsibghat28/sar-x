@@ -18,8 +18,8 @@ public class FlightService {
 	@Autowired
 	private FlightRepository flightrepo;
 	
-	public FlightTicket getTicket(int customerId) {
-		 return flightrepo.findByCustomerId(customerId);
+	public List<FlightTicket> getTicket(int customerId) {
+		 return  (List<FlightTicket>) flightrepo.findByCustomerId(customerId);
 		
 	}		
 	

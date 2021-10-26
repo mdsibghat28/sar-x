@@ -1,0 +1,31 @@
+.c {
+    /* background-image: url("https://cdn.dribbble.com/users/1325237/screenshots/11873285/media/f7f234f1ec657618b33a9082fe31cd5f.png"); */
+    background-image: url("https://wallpaperaccess.com/full/21523.jpg");
+
+    height: 1000px;
+    background-position: right;
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+
+.col-sm-4 {
+    position: relative;
+}
+
+.t {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+
+}
+
+.e {
+    color: azure;
+}
+/* #display{
+    display: none;
+
+} */
