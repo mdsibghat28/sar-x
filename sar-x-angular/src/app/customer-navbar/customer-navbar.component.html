@@ -10,30 +10,20 @@
      <div class="collapse navbar-collapse" id="navLinks">
          <ul class="navbar-nav ms-auto">
              <li class="nav-items">
-                 <a href="index.html" class="nav-link active">Home</a>
-             </li>
-             <li class="nav-items">
-                 <a href="#" class="nav-link">About Us</a>
-             </li>
-             <li class="nav-items">
-                 <a href="#" class="nav-link">Services</a>
+                 <a routerLink="" class="nav-link active" (click) = "logOut()">Home</a>
              </li>
              <li class="nav-item dropdown">
                  <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Bookings</a>
-                 <ul class="dropdown-menu">
-                     <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Flight</a></li>
-                     <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Space Room</a></li>
+                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <li><a routerLink="flights" class="dropdown-item"  >Flight</a></li>
+                     <li><a routerLink="space-rooms" class="dropdown-item" >Space Room</a></li>
                  </ul>
              </li>
              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">View Bookings</a>
-                <ul class="dropdown-menu">
-                    <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Flight</a></li>
-                    <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Space Room</a></li>
-                </ul>
+                <a routerLink="view-booking" class="nav-link">View Bookings</a>
             </li>
              <li class="nav-items">
-                 <a href="#" class="nav-link" >Log Out</a>
+                 <a routerLink = "" class="nav-link" (click) = "logOut()" >Log Out</a>
              </li>
          </ul>
      </div>

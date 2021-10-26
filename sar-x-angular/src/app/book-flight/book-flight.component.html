@@ -1,0 +1,107 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <form class="row gy-2 gx-3 align-items-center" #roomBooking = "ngForm" >
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="yourName">Name</label> -->
+                  <input type="text" class="form-control" [(ngModel)]="ticket.passenger_name" id="autoSizingInput" placeholder="Your Name" name="name">
+                </div>
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Email" name="email" value="{{currentCustomer.email}}">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Date" name="email" [(ngModel)] = "ticket.date">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="autoSizingSelect">No. of Rooms</label> -->
+                  <select class="form-select" [(ngModel)]="ticket.passengers" id="autoSizingSelect" name="guests">
+                    <option value="No of Passengers" selected>No of Passengers</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <select class="form-select" [(ngModel)]="ticket.source" id="autoSizingSelect" name="guests">
+                    <option value="Source" selected>Source</option>
+                    <option value="1">Earth</option>
+                    <option value="2">Mars</option>
+                    <option value="3">Jupiter</option>
+                    <option value="4">Mercury</option>
+                  </select>
+                  </div>
+                  <div class="col-md-4">
+                    <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
+                      <select class="form-select" [(ngModel)]="ticket.destination" id="autoSizingSelect" name="guests">
+                        <option value="Source" selected>Destination</option>
+                        <option value="1">Earth</option>
+                        <option value="2">Mars</option>
+                        <option value="3">Jupiter</option>
+                        <option value="4">Mercury</option>
+                      </select>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <input type="text" class="form-control" disabled readonly  placeholder="Date" name="email" [(ngModel)] = "ticket.name">
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-4"> -->
+                    <!-- <label class="visually-hidden" for="autoSizingSelect">Preference</label> -->
+                    <!-- <select class="form-select" name="flight-name" id="autoSizingSelect" [(ngModel)]="ticket.name">
+                      <option selected>Space Vehicle</option>
+                      <option value="Rover">Rover</option>
+                      <option value="Ranger">Ranger</option>
+                      <option value="Lander">Lander</option>
+                      <option value="Rover Light Speed">Rover Light Speed</option>
+                      <option value="Ranger Light Speed">Ranger Light Speed</option>
+                      <option value="Lander Light Speed">Lander Light Speed</option>
+                    </select>
+                  </div> -->
+                  <div class="col-md-4">
+                    <!-- <label class="visually-hidden" for="autoSizingSelect">Preference</label> -->
+                    <select class="form-select" name="room-name" id="autoSizingSelect" [(ngModel)]="ticket.className">
+                      <option selected>Class</option>
+                      <option value="Rover">General</option>
+                      <option value="Ranger">Astronaut</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <textarea cols="10" rows="8" name="message" id="message" class="form-control" placeholder="Any Messages?"></textarea>
+                    </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-primary" (click)="bookTicket()">Submit</button>
+                </div>
+              </form>
+        </div>
+        <div id="sidebar" class="col-md-4">
+            <!-- widget -->
+            <div class="widget widget-text">
+                <h3>Our Address</h3>    
+                <address>
+                    <h4>SARX park</h4>
+                    <span>20 Main Street, Silicon Valley</span>
+                    <span><strong>Phone:</strong>52693147</span><br>
+                    <span><strong>Email:</strong>contact@example.com</span><br>
+                    <span><strong>Web:</strong>http://example.com</span><br>
+                </address>
+    
+    
+            </div>
+            <!-- widget close -->
+        </div>
+    </div>
+
+</div> 
+
+       
+       
+

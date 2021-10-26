@@ -8,21 +8,28 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CustomerServiceService {
-  // url :string = "http://localhost:8090/register";
-  
+loggedIn: boolean = false;
 
   constructor(private _http:HttpClient) { }
   
   public signUpRest(customer : Customer):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/register",customer);
+    return this._http.post<any>("http://localhost:8080/register",customer);
 
   }
   public loginRest(customer : Customer):Observable<any>{
-    let currentcustomer= this._http.get<any>("http://localhost:8090/login/"+ customer.email + "/" + customer.password);
-
-    let cust = currentcustomer.subscribe(data=>console.log(data));
-    console.log(typeof(cust));
+    let currentcustomer= this._http.get<any>("http://localhost:8080/login/"+ customer.email + "/" + customer.password);
     return currentcustomer;
+  }
+
+  login():void {
+    this.loggedIn = true ;
+  }
+
+  logout():void{
+    this.loggedIn = false;
+  }
+  public isLoggedIn():boolean{
+    return this.loggedIn;
   }
 
 }

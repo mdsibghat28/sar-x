@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CustomerServiceService } from './customer-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sar-x-angular';
+
+constructor(public loggedInservice: CustomerServiceService){}
+
 }
+
+

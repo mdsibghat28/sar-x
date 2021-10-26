@@ -1,1 +1,78 @@
-<p>space-room-booking works!</p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <form class="row gy-2 gx-3 align-items-center" #roomBooking = "ngForm" >
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="yourName">Name</label> -->
+                  <input type="text" class="form-control" [(ngModel)]="room.name" id="autoSizingInput" placeholder="Your Name" name="name">
+                </div>
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Email" name="email" value="{{currentCustomer.email}}">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <!-- <label class="visually-hidden" for="autoSizingSelect">No. of Rooms</label> -->
+                  <select class="form-select" [(ngModel)]="room.accomodates" id="autoSizingSelect" name="guests">
+                    <option selected>No of Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                    <!-- <label class="visually-hidden" for="autoSizingInput">Check-in</label> -->
+                    <input type="text" name="check-in" [(ngModel)]="room.checkIn"  class="form-control" id="autoSizingInput" placeholder="Check-in">
+                  </div>
+                  <div class="col-md-4">
+                    <!-- <label class="visually-hidden" for="autoSizingInputGroup">Username</label> -->
+                    <div class="input-group">
+                      <input type="text" name="check-out"  [(ngModel)]="room.checkOut" class="form-control" id="autoSizingInputGroup" placeholder="Check-out">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <!-- <label class="visually-hidden" for="autoSizingSelect">Preference</label> -->
+                    <select class="form-select" name="room-name" id="autoSizingSelect" [(ngModel)]="room.roomName">
+                      <option selected>Room</option>
+                      <option value="Deluxe Room">Deluxe Room</option>
+                      <option value="Luxury Room">Luxury Room</option>
+                      <option value="Premier Room">Premier Room</option>
+                      <option value="Deluxe Suite">Deluxe Suite</option>
+                      <option value="Luxury Suite">Luxury Suite</option>
+                      <option value="Premier Suite">Premier Suite</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <textarea cols="10" rows="8" name="message" id="message" class="form-control" placeholder="Any Messages?"></textarea>
+                    </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-primary" (click)="bookRoom()">Submit</button>
+                </div>
+              </form>
+        </div>
+        <div id="sidebar" class="col-md-4">
+            <!-- widget -->
+            <div class="widget widget-text">
+                <h3>Our Address</h3>    
+                <address>
+                    <h4>SARX park</h4>
+                    <span>20 Main Street, Silicon Valley</span>
+                    <span><strong>Phone:</strong>52693147</span><br>
+                    <span><strong>Email:</strong>contact@example.com</span><br>
+                    <span><strong>Web:</strong>http://example.com</span><br>
+                </address>
+    
+    
+            </div>
+            <!-- widget close -->
+        </div>
+    </div>
+
+</div> 
+
+       
+       
+

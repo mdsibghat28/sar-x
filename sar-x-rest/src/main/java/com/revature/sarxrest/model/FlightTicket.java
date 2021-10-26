@@ -98,10 +98,6 @@ public class FlightTicket {
 		return passenger_name;
 	}
 
-	public void setPassenger_name(String passenger_name) {
-		this.passenger_name = passenger_name;
-	}
-
 	public int getPassengers() {
 		return passengers;
 	}

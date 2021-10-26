@@ -6,12 +6,16 @@ import { LoginComponent } from './login/login.component';
 import { ViewBookingsComponent } from './view-bookings/view-bookings.component';
 import { SpaceRoomBookingComponent } from './space-room-booking/space-room-booking.component';
 import { SpaceRoomsComponent } from './space-rooms/space-rooms.component';
+import { ViewFlightsComponent } from './view-flights/view-flights.component';
+import { BookFlightComponent } from './book-flight/book-flight.component';
 const routes: Routes = [
   {path:'', component:RegistrationComponent},
   {path:'login', component: LoginComponent},
   {path:'view-booking', component: ViewBookingsComponent},
   {path: 'space-rooms', component: SpaceRoomsComponent },
-  {path: 'space-room-booking', component: SpaceRoomBookingComponent}
+  {path: 'space-room-book', component: SpaceRoomBookingComponent},
+  {path: 'flights', component: ViewFlightsComponent},
+  {path: 'book-flights', component: BookFlightComponent}
 
 ];
 
